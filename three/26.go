@@ -11,10 +11,12 @@ func ReverseWords(phrase string) *WNode {
 	for _, c := range phrase {
 		if c == ' ' {
 			// emit word
-			tmp := node
-			node = &WNode{}
-			node.Next = tmp
-			node.Val = acc
+			if acc != "" {
+				tmp := node
+				node = &WNode{}
+				node.Next = tmp
+				node.Val = acc
+			}
 			acc = ""
 		} else {
 			acc += string(c)
