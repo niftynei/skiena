@@ -1,17 +1,15 @@
 package main
 
 import (
-	"github.com/niftynei/algos/three"
+	//"github.com/niftynei/algos/four"
 	"fmt"
+	"math/rand"
 )
 
 func main() {
 
-	//ll := three.ReverseWords("this is a sen tent")
-	ll := three.ReverseWords("hello   there monkey")
-	for ll != nil {
-		fmt.Printf("%s\n", ll.Val)
-		ll = ll.Next
+	for _, value := range rand.Perm(3) {
+		fmt.Println(value)
 	}
 }
 
