@@ -1,15 +1,13 @@
 package main
 
 import (
-	//"github.com/niftynei/algos/four"
-	"fmt"
-	"math/rand"
+	"github.com/niftynei/algos/five"
+	//"fmt"
+	//"math/rand"
 )
 
 func main() {
-
-	for _, value := range rand.Perm(3) {
-		fmt.Println(value)
-	}
+	graph := five.MakeGraph(five.StartEdges(), 6, false)
+	five.DFS(graph, 1)
 }
 
